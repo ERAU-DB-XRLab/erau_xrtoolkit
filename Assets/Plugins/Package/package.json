@@ -1,0 +1,18 @@
+{
+  "name": "com.erau.defaultpackage",
+  "version": "0.1.0",
+  "displayName": "Default Package",
+  "description": "A default package you can copy and paste to create your own.",
+  "unity": "2022.3",
+  "documentationUrl": "https://github.com/ERAU-DB-XRLab/erau_defaultpackage",
+  "changelogUrl": "https://github.com/ERAU-DB-XRLab/erau_defaultpackage",
+  "licensesUrl": "https://github.com/ERAU-DB-XRLab/erau_defaultpackage",
+  "keywords": [
+    "default",
+  ],
+  "author": {
+    "name": "ERAU XR Lab",
+    "email": "dbvrlab@erau.edu",
+    "url": "erau.edu"
+  }
+}
