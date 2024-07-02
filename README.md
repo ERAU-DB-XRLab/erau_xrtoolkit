@@ -2,9 +2,9 @@
 
 <h1> Info </h1>
 
-Assembly: com.erau.defaultpackage
+Assembly: com.erau.xrtoolkit
 
-Namespace: ERAU.DefaultPackage
+Namespace: ERAU.XRToolkit
 
 Scripting Define Symbol:
 HAND_TRACKING
@@ -18,6 +18,6 @@ PASSTHROUGH
 
 -  Add package by Git URL
 
--  Add this URL: https://github.com/ERAU-DB-XRLab/erau_defaultpackage.git?path=Assets/Plugins/Package
+-  Add this URL: https://github.com/ERAU-DB-XRLab/erau_xrtoolkit.git?path=Assets/Plugins/Package
 
 <hr />
