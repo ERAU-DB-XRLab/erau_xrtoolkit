@@ -26,12 +26,12 @@ public class HandTrackingInteract : HandInteract
     {
         if (grab.CheckConditions(args))
         {
+            grabPoint.gameObject.SetActive(false);
             if (!grabbedInteractable)
             {
                 grabbedInteractable = GetNearestInteractable();
                 if(grabbedInteractable)
                 {
-                    grabPoint.gameObject.SetActive(false);
                     grabbedInteractable.Grabbed.Invoke(this);
                 }
             }
