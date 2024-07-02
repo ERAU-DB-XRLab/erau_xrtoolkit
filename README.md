@@ -6,7 +6,9 @@ Assembly: com.erau.defaultpackage
 
 Namespace: ERAU.DefaultPackage
 
-Scripting Define Symbol: ERAU_DEFAULTPACKAGE
+Scripting Define Symbol:
+HAND_TRACKING
+PASSTHROUGH
 
 <hr />
 
