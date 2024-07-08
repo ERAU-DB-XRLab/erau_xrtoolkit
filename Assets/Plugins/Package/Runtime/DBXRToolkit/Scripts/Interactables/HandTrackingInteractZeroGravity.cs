@@ -8,6 +8,7 @@ public class HandTrackingInteractZeroGravity : HandInteract
 
     [SerializeField] private XRHandShape grab;
     [SerializeField] private Transform grabPoint;
+    [SerializeField] private Velocity vel;
 
     private Vector3 holdPoint;
     private Vector3 playerPoint;
@@ -49,15 +50,12 @@ public class HandTrackingInteractZeroGravity : HandInteract
             if (!grabbedInteractable)
             {
 
-                Debug.Log("A");
                 if (CheckStatic())
                 {
-                    Debug.Log("GRABBING");
                     UpdateGrabPoints();
                     Holding = true;
                 } else
                 {
-                    Debug.Log("NOPE");
                     grabbedInteractable = GetNearestInteractable();
                     if (grabbedInteractable)
                     {
@@ -72,6 +70,7 @@ public class HandTrackingInteractZeroGravity : HandInteract
             if(Holding)
             {
                 Holding = false;
+                rb.velocity = vel.GetVelocity();
             }
 
             if (grabbedInteractable)
