@@ -1952,6 +1952,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &359015152
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.169
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.779
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375168015536796825, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667119390252575615, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      propertyPath: m_Name
+      value: ZeroGravityPlayer-HandTracking
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8667119390252575615, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1973054082}
+  m_SourcePrefab: {fileID: 100100000, guid: ff030f1abdd6e1648a3cc6db2e31f1cb, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,7 +3210,7 @@ MonoBehaviour:
     m_Bits: 32
   staticLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   interactLayer: 3
   uiLayer: 5
   throwSpeedMultiplier: 1.5
@@ -8116,7 +8188,7 @@ GameObject:
   - component: {fileID: 1552620204}
   - component: {fileID: 1552620203}
   - component: {fileID: 1552620202}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: InteractablesTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8526,7 +8598,7 @@ GameObject:
   - component: {fileID: 1686542306}
   - component: {fileID: 1686542305}
   - component: {fileID: 1686542304}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9729,6 +9801,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969431253}
   m_CullTransparentMesh: 1
+--- !u!1 &1973054079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8667119390252575615, guid: ff030f1abdd6e1648a3cc6db2e31f1cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 359015152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1973054082
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973054079}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1998302589
 GameObject:
   m_ObjectHideFlags: 0
@@ -11187,6 +11292,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HandTrackerPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 8667119390252575615, guid: b0931d22cc4107648b3a7fa90b649f2a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11363,6 +11473,7 @@ SceneRoots:
   - {fileID: 1474156017}
   - {fileID: 1860326627}
   - {fileID: 1583176545}
+  - {fileID: 359015152}
   - {fileID: 7295208172726172621}
   - {fileID: 140224398}
   - {fileID: 423536227486019016}
