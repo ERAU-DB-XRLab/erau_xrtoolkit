@@ -5,13 +5,8 @@ using UnityEngine;
 public class PointerInteract : MonoBehaviour
 {
 
-    private HandInteract interact;
+    [SerializeField] private HandInteract interact;
     private float pressTimer;
-
-    void Awake()
-    {
-        interact = GetComponentInParent<HandInteract>();
-    }
 
     void Update()
     {
