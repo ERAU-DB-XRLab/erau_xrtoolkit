@@ -7,15 +7,15 @@ public class HandMovementTranslate : MonoBehaviour
 {
 
     [Header("Player Movement Method (Pick One)")]
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private CharacterController cc;
+    [SerializeField] protected Rigidbody rb;
+    [SerializeField] protected CharacterController cc;
     
     [Space]
-    [SerializeField] private InputActionProperty move;
+    [SerializeField] protected InputActionProperty move;
     [Space]
-    [SerializeField] private float movementSpeed;
+    [SerializeField] protected float movementSpeed;
 
-    private Transform mainCamera;
+    protected Transform mainCamera;
 
     void Awake()
     {
