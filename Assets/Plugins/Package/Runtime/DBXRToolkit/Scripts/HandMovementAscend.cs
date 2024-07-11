@@ -6,11 +6,11 @@ using UnityEngine.InputSystem;
 public class HandMovementAscend : MonoBehaviour
 {
 
-    [SerializeField] private Transform player;
+    [SerializeField] protected Transform player;
     [Space]
-    [SerializeField] private InputActionProperty move;
+    [SerializeField] protected InputActionProperty move;
     [Space]
-    [SerializeField] private float movementSpeed;
+    [SerializeField] protected float movementSpeed;
 
     // Update is called once per frame
     void Update()
