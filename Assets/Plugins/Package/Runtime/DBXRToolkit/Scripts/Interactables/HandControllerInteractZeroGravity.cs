@@ -91,6 +91,8 @@ public class HandControllerInteractZeroGravity : HandControllerInteract
         {
 
             Vector2 jetpackInput = jetpack.action.ReadValue<Vector2>();
+
+            if(jetpackInput.sqrMagnitude > 0)
             rb.velocity = Vector3.MoveTowards(rb.velocity, ((mainCamera.transform.forward * jetpackInput.y) + (mainCamera.transform.right * jetpackInput.x)) * jetpackSpeed, accel * Time.deltaTime);
 
         }
