@@ -9,6 +9,7 @@ public class HandControllerInteractZeroGravity : HandControllerInteract
     [SerializeField] private InputActionProperty jetpack;
     [SerializeField] private float jetpackSpeed;
     [SerializeField] private Velocity playerVel;
+    [SerializeField] private Transform trackedHand;
 
     private readonly float accel = 2f;
     private Rigidbody rb;
@@ -97,7 +98,7 @@ public class HandControllerInteractZeroGravity : HandControllerInteract
         if(Holding && !Rotating)
         {
             // Translate
-            Vector3 delta = transform.parent.localPosition - holdPoint;
+            Vector3 delta = trackedHand.localPosition - holdPoint;
             rb.transform.position = playerPoint - (rb.transform.forward * delta.z) - (rb.transform.right * delta.x) - (rb.transform.up * delta.y);
         }
 
@@ -110,7 +111,7 @@ public class HandControllerInteractZeroGravity : HandControllerInteract
 
     public void UpdateGrabPoints()
     {
-        holdPoint = transform.parent.localPosition;
+        holdPoint = trackedHand.localPosition;
         playerPoint = rb.transform.position;
     }
 

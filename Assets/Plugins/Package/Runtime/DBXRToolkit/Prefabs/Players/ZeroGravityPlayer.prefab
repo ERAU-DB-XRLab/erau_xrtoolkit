@@ -512,8 +512,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ff8f3120fd8d94b81512e2d0ec29fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHand: {fileID: 5057111367640145259}
-  rightHand: {fileID: 5947711905648709315}
+  leftHandInteract: {fileID: 5057111367640145259}
+  rightHandInteract: {fileID: 5947711905648709315}
+  leftHandTracked: {fileID: 6254989012023559497}
+  rightHandTracked: {fileID: 3842616689053417810}
 --- !u!114 &3363376768605206355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,6 +725,11 @@ PrefabInstance:
       propertyPath: playerVel
       value: 
       objectReference: {fileID: 3363376768605206355}
+    - target: {fileID: 6577518105845062463, guid: e73d4250c78c5f14eb08dfb1b7811ac5,
+        type: 3}
+      propertyPath: trackedHand
+      value: 
+      objectReference: {fileID: 3842616689053417810}
     - target: {fileID: 6577518105845062463, guid: e73d4250c78c5f14eb08dfb1b7811ac5,
         type: 3}
       propertyPath: jetpackSpeed
@@ -1096,6 +1103,11 @@ PrefabInstance:
       propertyPath: playerVel
       value: 
       objectReference: {fileID: 3363376768605206355}
+    - target: {fileID: 6577518105845062463, guid: e73d4250c78c5f14eb08dfb1b7811ac5,
+        type: 3}
+      propertyPath: trackedHand
+      value: 
+      objectReference: {fileID: 6254989012023559497}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
