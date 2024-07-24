@@ -331,8 +331,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 922728188869098824}
-  - component: {fileID: 2281887298062446857}
-  - component: {fileID: 2867868414143036652}
   m_Layer: 0
   m_Name: HandObject
   m_TagString: Untagged
@@ -356,74 +354,6 @@ Transform:
   - {fileID: 856686030054901999}
   m_Father: {fileID: 3842616689053417810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2281887298062446857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789267261836434817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87f031ce4306704592baf31a822de5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2867868414143036652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789267261836434817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9b64bb462a2c44288681e891476665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grab:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Grab
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 69f65c0b-a6ad-43dd-8b99-fa4c813d764b
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 1042859557238961101, guid: 8a8d0852d184b244c87d24d796935e5f,
-      type: 3}
-  interact:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Interact
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: c350e1d2-32a3-49bb-9bdb-552b388abba7
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -122315553633490854, guid: 8a8d0852d184b244c87d24d796935e5f,
-      type: 3}
-  grabPoint: {fileID: 6260394341644472722}
-  anim: {fileID: 0}
-  handType: 0
-  enableJetpackInput: 0
-  jetpack:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Jetpack
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: cabcb04c-186e-4b81-9251-d12c10296917
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  jetpackSpeed: 0
-  playerVel: {fileID: 3363376768605206355}
 --- !u!1 &3492143741414846732
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,8 +512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ff8f3120fd8d94b81512e2d0ec29fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 2867868414143036652}
+  leftHand: {fileID: 5057111367640145259}
+  rightHand: {fileID: 5947711905648709315}
 --- !u!114 &3363376768605206355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,6 +761,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 703280250826905084}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5947711905648709315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6577518105845062463, guid: e73d4250c78c5f14eb08dfb1b7811ac5,
+    type: 3}
+  m_PrefabInstance: {fileID: 703280250826905084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9b64bb462a2c44288681e891476665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &894305489390350084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1165,6 +1107,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2118519354845791828}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5057111367640145259 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6577518105845062463, guid: e73d4250c78c5f14eb08dfb1b7811ac5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2118519354845791828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9b64bb462a2c44288681e891476665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6245423546915779079
 PrefabInstance:
   m_ObjectHideFlags: 0

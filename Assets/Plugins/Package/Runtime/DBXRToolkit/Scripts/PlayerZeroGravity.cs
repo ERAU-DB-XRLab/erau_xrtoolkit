@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class PlayerZeroGravity : Player
 {
 
-    [SerializeField] private HandControllerInteractZeroGravity leftHand, rightHand;
+    [SerializeField] private HandControllerInteractZeroGravity leftHandInteract, rightHandInteract;
+    [SerializeField] private Transform leftHandTracked, rightHandTracked;
 
     private Camera mainCamera;
     private Vector3 leftStart, rightStart;
@@ -23,31 +24,31 @@ public class PlayerZeroGravity : Player
     void Update()
     {
 
-        if(leftHand.Holding && rightHand.Holding)
+        if(leftHandInteract.Holding && rightHandInteract.Holding)
         {
             
-            if(!leftHand.Rotating)
+            if(!leftHandInteract.Rotating)
             {
-                leftHand.Rotating = true;
-                rightHand.Rotating = true;
-                leftStart = leftHand.transform.parent.localPosition;
-                rightStart = rightHand.transform.parent.localPosition;
+                leftHandInteract.Rotating = true;
+                rightHandInteract.Rotating = true;
+                leftStart = leftHandTracked.localPosition;
+                rightStart = rightHandTracked.localPosition;
                 axis = mainCamera.transform.forward;
                 vectorStart = leftStart - rightStart;
             }
 
-            Vector3 newVector = leftHand.transform.parent.localPosition - rightHand.transform.parent.localPosition;
+            Vector3 newVector = leftHandTracked.localPosition - rightHandTracked.localPosition;
             transform.RotateAround(mainCamera.transform.position, axis, Vector3.SignedAngle(newVector, vectorStart, axis));
             vectorStart = newVector;
 
         } else
         {
-            if (leftHand.Rotating)
+            if (leftHandInteract.Rotating)
             {
-                leftHand.Rotating = false;
-                rightHand.Rotating = false;
-                leftHand.UpdateGrabPoints();
-                rightHand.UpdateGrabPoints();
+                leftHandInteract.Rotating = false;
+                rightHandInteract.Rotating = false;
+                leftHandInteract.UpdateGrabPoints();
+                rightHandInteract.UpdateGrabPoints();
             }
         }
 
