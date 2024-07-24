@@ -31,58 +31,63 @@ public class HandControllerLaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
-        if(Physics.Raycast(new Ray(laserOrigin.position, laserOrigin.forward), out hit, Mathf.Infinity, DBXRResources.Main.InteractLayerMask | DBXRResources.Main.UILayerMask, QueryTriggerInteraction.Collide))
-        {
-
-            if (hit.transform.gameObject.layer == DBXRResources.Main.InteractLayer)
-            {
-
-                InteractableComponent ic = hit.transform.gameObject.GetComponent<InteractableComponent>();
-                if(ic && currentInteractable != ic)
-                {
-
-                    ResetIC();
-
-                    currentInteractable = ic;
-                    currentInteractable.RayEntered.Invoke(null);
-
-                } else
-                {
-                    ResetIC();
-                }
-
-                ResetUI();
-
-            }
-            else
-            if (hit.transform.gameObject.layer == DBXRResources.Main.UILayer)
-            {
-                UIButton button = hit.transform.gameObject.GetComponent<UIButton>();
-                if(button && currentUI != button)
-                {
-
-                    ResetUI();
-                    currentUI = button;
-                
-                }
-
-                ResetIC();
-
-            }
-
-            hitPoint = hit.point;
-
-        } else
-        {
-            hitPoint = laserOrigin.position + (laserOrigin.forward * 999);
-            ResetUI();
-            ResetIC();
-        }
+        
 
         interaction = interact.action.ReadValue<float>();
         if(interaction > 0)
         {
+
+            RaycastHit hit;
+            if (Physics.Raycast(new Ray(laserOrigin.position, laserOrigin.forward), out hit, Mathf.Infinity, DBXRResources.Main.InteractLayerMask | DBXRResources.Main.UILayerMask, QueryTriggerInteraction.Collide))
+            {
+
+                if (hit.transform.gameObject.layer == DBXRResources.Main.InteractLayer)
+                {
+
+                    InteractableComponent ic = hit.transform.gameObject.GetComponent<InteractableComponent>();
+                    if (ic && currentInteractable != ic)
+                    {
+
+                        ResetIC();
+
+                        currentInteractable = ic;
+                        currentInteractable.RayEntered.Invoke(null);
+
+                    }
+                    else
+                    {
+                        ResetIC();
+                    }
+
+                    ResetUI();
+
+                }
+                else
+                if (hit.transform.gameObject.layer == DBXRResources.Main.UILayer)
+                {
+                    UIButton button = hit.transform.gameObject.GetComponent<UIButton>();
+                    if (button && currentUI != button)
+                    {
+
+                        ResetUI();
+                        currentUI = button;
+
+                    }
+
+                    ResetIC();
+
+                }
+
+                hitPoint = hit.point;
+
+            }
+            else
+            {
+                hitPoint = laserOrigin.position + (laserOrigin.forward * 999);
+                ResetUI();
+                ResetIC();
+            }
+
             line.positionCount = 2;
             line.SetPositions(new Vector3[] { laserOrigin.position, hitPoint });
             
@@ -127,6 +132,11 @@ public class HandControllerLaser : MonoBehaviour
             }
             interacting = false;
             line.positionCount = 0;
+
+            hitPoint = laserOrigin.position + (laserOrigin.forward * 999);
+            ResetUI();
+            ResetIC();
+
         }
 
     }
