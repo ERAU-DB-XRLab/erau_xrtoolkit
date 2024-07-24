@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3514207328602361134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1585223028277175561}
+  - component: {fileID: 7562741203244382836}
+  - component: {fileID: 6577518105845062463}
+  m_Layer: 0
+  m_Name: HandControllerInteractZeroGravity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1585223028277175561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514207328602361134}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7562741203244382836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514207328602361134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b87f031ce4306704592baf31a822de5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6577518105845062463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3514207328602361134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9b64bb462a2c44288681e891476665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grab:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grab
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 99984b47-a1b4-4c7e-aaff-1dc650c81421
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4131439791962940510, guid: 8a8d0852d184b244c87d24d796935e5f,
+      type: 3}
+  interact:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Interact
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 1626f202-ad3d-4097-a92b-7eed5922f758
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 8314702529340031542, guid: 8a8d0852d184b244c87d24d796935e5f,
+      type: 3}
+  grabPoint: {fileID: 0}
+  anim: {fileID: 0}
+  handType: 0
+  enableJetpackInput: 1
+  jetpack:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Jetpack
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 8b40a23c-679a-4e2f-9530-57b959404969
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 520677518379850546, guid: 8a8d0852d184b244c87d24d796935e5f,
+      type: 3}
+  jetpackSpeed: 1.5
+  playerVel: {fileID: 0}
